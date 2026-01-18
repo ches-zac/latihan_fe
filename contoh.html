@@ -1,0 +1,153 @@
+<!-- HTML Only Example -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Only Example</title>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a simple paragraph with no styling applied.</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <footer>
+        <p>&copy; 2026 My Website</p>
+    </footer>
+</body>
+</html> -->
+
+<!-- HTML and CSS Example -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>HTML and CSS Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            color: #0000ff; /* Blue color */
+            text-align: center;
+        }
+        p {
+            line-height: 1.5;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 40px;
+        }
+        li {
+            background-color: #dddddd;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This paragraph is now styled with a specific font, color, and line height.</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <footer>
+        <p>&copy; 2026 My Website</p>
+    </footer>
+</body>
+</html> -->
+
+<!-- ------------contoh html css dan js----------------------------- -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML, CSS, and JavaScript Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            color: #0000ff;
+            text-align: center;
+        }
+        p {
+            line-height: 1.5;
+            text-align: center;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 40px;
+        }
+        li {
+            background-color: #dddddd;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Welcome to My Website</h1>
+
+    <p id="description">
+        Click the button below to see JavaScript in action.
+    </p>
+
+    <button onclick="changeContent()">Click Me</button>
+
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <footer>
+        <p>&copy; 2026 My Website</p>
+    </footer>
+
+    <script>
+        function changeContent() {
+            // Change text content
+            document.getElementById("title").innerText = "Content Updated!";
+            document.getElementById("description").innerText =
+                "This content was updated using JavaScript.";
+
+            // Change style dynamically
+            document.body.style.backgroundColor = "#e0f7fa";
+
+            // Add new list item
+            const newItem = document.createElement("li");
+            newItem.innerText = "New Item Added by JavaScript";
+            document.getElementById("itemList").appendChild(newItem);
+        }
+    </script>
+
+</body>
+</html>

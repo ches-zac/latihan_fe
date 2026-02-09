@@ -24,6 +24,12 @@
         <!-- DATA BINDING -->
         {{ todo.text }}
 
+        <!-- status item -->
+        {{ todo.isDone }}
+
+        <!-- update status -->
+        <button @click="changeStatusTodo(index)">Hapus</button>
+
         <!-- EVENT + PARAMETER -->
         <button @click="removeTodo(index)">Hapus</button>
       </li>
@@ -32,6 +38,7 @@
 </template>
 
 <script>
+import { Channel } from 'node:diagnostics_channel';
 import { ref } from 'vue'
 
 export default {
@@ -52,6 +59,7 @@ export default {
 
       todos.value.push({
         text: newTodo.value,
+        isDone: false,
       })
       // artinya jika ada newTodo, maka tambahkan ke array todos
       // text adalah properti dari object yang ditambahkan ke array todos
@@ -66,6 +74,10 @@ export default {
     // splice() = menghapus item dari array
     // index = parameter yang diterima dari event klik tombol hapus
 
+    function changeStatusTodo(index) {
+      // return !todos.value[index].status; ?? apa artinya?
+      todos.value[index].isDone = !todos.value[index].isDone // bedanya sama ini??
+    }
     // =========================
     // EXPOSE (KIRIM VARIABLE DAN FUNGSI) KE TEMPLATE
     // =========================
@@ -74,6 +86,7 @@ export default {
       todos,
       addTodo,
       removeTodo,
+      changeStatusTodo,
     }
   },
 }

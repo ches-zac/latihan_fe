@@ -25,10 +25,12 @@
         {{ todo.text }}
 
         <!-- status item -->
+        <!-- KUNCI JAWABAN: menampilkan status todo -->
         {{ todo.isDone }}
 
         <!-- update status -->
-        <button @click="changeStatusTodo(index)">Hapus</button>
+        <!-- KUNCI JAWABAN: tombol untuk mengubah status todo -->
+        <button @click="changeStatusTodo(index)">Toggle Status</button>
 
         <!-- EVENT + PARAMETER -->
         <button @click="removeTodo(index)">Hapus</button>
@@ -59,7 +61,7 @@ export default {
 
       todos.value.push({
         text: newTodo.value,
-        isDone: false,
+        isDone: false, // KUNCI JAWABAN: tambahkan properti isDone untuk menyimpan status todo (selesai atau belum)
       })
       // artinya jika ada newTodo, maka tambahkan ke array todos
       // text adalah properti dari object yang ditambahkan ke array todos
@@ -74,6 +76,7 @@ export default {
     // splice() = menghapus item dari array
     // index = parameter yang diterima dari event klik tombol hapus
 
+    // KUNCI JAWABAN: fungsi untuk mengubah status todo
     function changeStatusTodo(index) {
       // return !todos.value[index].status; ?? apa artinya?
       todos.value[index].isDone = !todos.value[index].isDone // bedanya sama ini??
@@ -86,7 +89,7 @@ export default {
       todos,
       addTodo,
       removeTodo,
-      changeStatusTodo,
+      changeStatusTodo, //KUNCI JAWABAN: jangan lupa expose fungsi changeStatusTodo ke template
     }
   },
 }
